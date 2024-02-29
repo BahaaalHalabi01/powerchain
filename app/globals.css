@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --secondary: #f2f3f7;
+  --background-light-blue-rgb: 102, 83,255;
+
+  --background-brand: #f9f8ff;
+  --strong-brand: #ae9cfe;
+  --border-blue: #deddf6;
+
+  --text-primary: #1e1f31;
+  --text-brand-secondary: #9c9bb3;
+  --text-blue: #112ff8;
+  --text-danger: #fc4137;
+  --background-icon: #9c9bb3;
+  --brand-purple: #1e1f31;
+  --background-secondary: : #112ff8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: var(--text-primary);
+  background: white;
+}
+
+strong {
+  color: var(--strong-brand);
+}
+
+
+@layer utilities {
+  .item-block {
+    @apply bg-brand-bg min-h-block max-h-fit flex md:gap-x-3 md:px-3 md:py-4 px-1.5 py-2 max-w-full rounded-lg gap-x-1 flex-col grow gap-y-0.5 md:flex-row;
+  }
+
+  .id-date {
+    @apply inline-flex md:flex md:flex-col md:max-w-20 text-sm justify-between py-1 gap-x-2 w-full;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
